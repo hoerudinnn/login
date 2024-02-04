@@ -1,5 +1,7 @@
+<!-- lihat $config disini, coba pelajari maksud extend -->
 <?= $this->extend('auth/templates/index'); ?>
 
+<!-- lihat bagian content -->
 <?= $this->section('content'); ?>
 <div class="container">
 
@@ -27,6 +29,7 @@
                                         <!-- Email -->
                                         <!-- this $config are null, knowhere to be found it's origins. So the error would be thrown -->
                                         <?php if ($config->validFields === ['email']): ?>
+                                            
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
                                                 name="login" placeholder="<?=lang('Auth.email')?>">
