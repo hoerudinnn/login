@@ -78,7 +78,8 @@ class Services extends BaseService
         $class = $config->requireActivation ?? UserActivator::class;
 
         /** @var class-string<ActivatorInterface> $class */
-        return new $class($config);
+        var_dump($config);
+        return new $class ('$config');
     }
 
     /**
