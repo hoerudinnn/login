@@ -8,6 +8,12 @@ use CodeIgniter\Filters\DebugToolbar;
 use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
+/**
+ * Add these namespace due to implement Myth/Auth extensions
+ */
+use Myth\Auth\Filters\LoginFilter;
+use Myth\Auth\Filters\RoleFilter;
+use Myth\Auth\Filters\PermissionFilter;
 
 class Filters extends BaseConfig
 {
@@ -18,15 +24,19 @@ class Filters extends BaseConfig
      * @var array<string, class-string|list<class-string>> [filter_name => classname]
      *                                                     or [filter_name => [classname1, classname2, ...]]
      */
+
+     /**
+      * Add login, role, and permission into aliases due to implement Myth/Auth extensions
+      */
     public array $aliases = [
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'login'      => \Myth\Auth\Filters\LoginFilter::class,
-        'role'       => \Myth\Auth\Filters\RoleFilter::class,
-        'permission' => \Myth\Auth\Filters\PermissionFilter::class,
+        'login'         => LoginFilter::class,
+        'role'          => RoleFilter::class,
+        'permission'    => PermissionFilter::class,
     ];
 
     /**
@@ -37,10 +47,10 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
+            'honeypot',
+            'login',
             // 'csrf',
             // 'invalidchars',
-            'login'
         ],
         'after' => [
             'toolbar',

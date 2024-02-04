@@ -73,11 +73,15 @@ class Auth extends BaseConfig
      *
      * @var array
      */
+
+     /**
+      * The login and register were commented persumably about to implement login and register by itself, why not
+      */
     public $views = [
-        // 'login'           => 'Myth\Auth\Views\login',
-        // 'register'        => 'Myth\Auth\Views\register',
-        'login'           => '\App\Views\Auth\login',
-        'register'        => '\App\Views\Auth\register',
+        'login'           => 'Myth\Auth\Views\login',
+        'register'        => 'Myth\Auth\Views\register',
+        // 'login'           => '\App\Views\Auth\login',
+        // 'register'        => '\App\Views\Auth\register',
         'forgot'          => 'Myth\Auth\Views\forgot',
         'reset'           => 'Myth\Auth\Views\reset',
         'emailForgot'     => 'Myth\Auth\Views\emails\forgot',
@@ -189,7 +193,8 @@ class Auth extends BaseConfig
      * @var string|null Name of the ActivatorInterface class
      */
     // public $requireActivation = 'Myth\Auth\Authentication\Activators\EmailActivator';
-    public $requireActivation = false;
+    // public $requireActivation = false;
+    public $requireActivation = null;
 
     /**
      * --------------------------------------------------------------------

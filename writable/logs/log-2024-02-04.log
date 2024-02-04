@@ -399,3 +399,892 @@ in VENDORPATH\myth\auth\src\Config\Services.php on line 83.
 11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\login\\public\\index.php')
 INFO - 2024-02-04 07:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-04 07:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 09:29:19 --> Error: Class "CodeIgniter\Database\PostgreSQL\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('PostgreSQL', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Common.php(365): CodeIgniter\Database\Config::connect('default', true)
+ 4 SYSTEMPATH\Database\MigrationRunner.php(144): db_connect(null)
+ 5 SYSTEMPATH\Config\Services.php(417): CodeIgniter\Database\MigrationRunner->__construct(Object(Config\Migrations), null)
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::migrations(Object(Config\Migrations), null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('migrations', [...])
+ 8 SYSTEMPATH\Config\Services.php(412): CodeIgniter\Config\BaseService::getSharedInstance('migrations', null, null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH\Commands\Database\Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic('migrations', [])
+11 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+CRITICAL - 2024-02-04 09:30:19 --> Error: Class "CodeIgniter\Database\PostgreSQL\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('PostgreSQL', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Common.php(365): CodeIgniter\Database\Config::connect('default', true)
+ 4 SYSTEMPATH\Database\MigrationRunner.php(144): db_connect(null)
+ 5 SYSTEMPATH\Config\Services.php(417): CodeIgniter\Database\MigrationRunner->__construct(Object(Config\Migrations), null)
+ 6 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::migrations(Object(Config\Migrations), null, false)
+ 7 SYSTEMPATH\Config\BaseService.php(199): CodeIgniter\Config\BaseService::__callStatic('migrations', [...])
+ 8 SYSTEMPATH\Config\Services.php(412): CodeIgniter\Config\BaseService::getSharedInstance('migrations', null, null)
+ 9 SYSTEMPATH\Config\BaseService.php(258): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH\Commands\Database\Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic('migrations', [])
+11 SYSTEMPATH\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 ROOTPATH\spark(102): CodeIgniter\CLI\Console->run()
+ERROR - 2024-02-04 09:32:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:34:44 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:36:40 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:37:50 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:43:36 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:48:37 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:50:28 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:51:41 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:52:40 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:54:12 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:54:17 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:54:23 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:54:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:56:11 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 09:56:58 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:00:47 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:01:00 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:04:58 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:05:05 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:05:16 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:05:26 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:08:25 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:08:26 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:45:07 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:45:46 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:46:01 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 10:47:48 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:03:24 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:04:38 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:11:52 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:11:53 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:52 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:53 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:54 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:54 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:58 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:13:59 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:14:00 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:14:00 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:14:05 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:14:06 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:14:15 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:16:17 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:16:24 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-02-04 11:18:41 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#7 {main}
+ERROR - 2024-02-04 11:19:47 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#7 {main}
+ERROR - 2024-02-04 11:20:03 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#7 {main}
+ERROR - 2024-02-04 11:21:24 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#7 {main}
+ERROR - 2024-02-04 11:22:32 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Database.php(66): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\Postgre\Connection))
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\CreateDatabase.php(134): CodeIgniter\Database\Config::forge()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#7 {main}
+ERROR - 2024-02-04 11:22:38 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_connect() in C:\Users\User\Documents\Development\CI-Login-Master\system\Database\Postgre\Connection.php:72
+Stack trace:
+#0 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(392): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#3 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(757): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\User\Documents\Development\CI-Login-Master\system\Database\MigrationRunner.php(161): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\User\Documents\Development\CI-Login-Master\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\User\Documents\Development\CI-Login-Master\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\User\Documents\Development\CI-Login-Master\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+INFO - 2024-02-04 11:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:44:00 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:44:15 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:44:19 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:44:25 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:14 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:16 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:19 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:21 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:25 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:27 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:44 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:45 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:46 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:45:47 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:46:54 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')
+INFO - 2024-02-04 11:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-04 11:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-04 11:47:00 --> ErrorException: Undefined variable $config
+in APPPATH\Views\auth\login.php on line 28.
+ 1 APPPATH\Views\auth\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $config', 'C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('auth/login')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Documents\\Development\\CI-Login-Master\\public\\index.php')

@@ -6,6 +6,9 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
+    /**Taken from github documentation Configuration
+     * Edit app/Config/Email.php and verify that a fromName and fromEmail are set as that is used when sending emails for password reset, etc.
+     */
     public string $fromEmail  = 'hoerudinpermana30@gmail.com';
     public string $fromName   = 'Hoerudin';
     public string $recipients = '';
