@@ -20,18 +20,18 @@
 
                     <form action="<?= url_to('register') ?>" method="post" class="user">
                         <?= csrf_field() ?>
+                        
+                        <!-- username -->
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>"
+                                name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
+                        </div>
 
                         <!-- Email -->
                         <div class="form-group">
                             <input type="email" class="form-control form-control-user <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
                                 name="email" placeholder="<?=lang('Auth.email')?>"value=" <?= old('email') ?>">
                             <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
-                        </div>
-
-                        <!-- username -->
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-user <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>"
-                                name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
                         </div>
 
                         <!-- Password -->
@@ -42,22 +42,19 @@
                             </div>
                             
                             <div class="col-sm-6">
-                                <input type="password" class="form-control form-control-user"
-                                    id="exampleRepeatPassword" placeholder="Repeat Password">
+                                <input type="password" class="form-control form-control-user <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>"
+                                    name="pass_confirm" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
                             </div>
                         </div>
 
-                        <a href="login.html" class="btn btn-primary btn-user btn-block">
-                            Register Account
-                        </a>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                            <?=lang('Auth.register')?>
+                        </button>
                         
                     </form>
                     <hr>
                     <div class="text-center">
-                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                    </div>
-                    <div class="text-center">
-                        <a class="small" href="login.html">Already have an account? Login!</a>
+                        <a class="small" href="<?= url_to('login') ?>"><?=lang('Auth.alreadyRegistered')?><?=lang('Auth.signIn')?></a>
                     </div>
                 </div>
             </div>
