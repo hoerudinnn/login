@@ -25,7 +25,7 @@
             <th scope="row"><?= $i++; ?></th>
             <td><?= $user->username; ?></td>
             <td><?= $user->email; ?></td>
-            <td></td>
+            <td><?= $user->name; ?></td>
             <td>
                 <a href="<?= base_url('admin/' . $user->userid);?>" class="btn btn-info">Detail</a>
             </td>
