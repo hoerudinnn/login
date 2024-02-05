@@ -7,7 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'User::index');
 $routes->get('register', 'Home::register');
-$routes->get('user', 'Home::user');
+$routes->get('user', 'User::index');
+$routes->get('admin', 'Admin::index');
+
 
 $routes->get('/admin', 'User::index', ['filter' => 'role:admin']);
 $routes->get('/admin/index', 'User::index', ['filter' => 'role:admin']);

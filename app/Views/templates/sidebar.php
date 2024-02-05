@@ -8,7 +8,7 @@
     <div class="sidebar-brand-text mx-3">Hoer</div>
 </a>
 
-<?php if (in_groups('admin')) { ?>
+<?php if (in_groups('admin')) : ?>
     <!-- Divider -->
     <hr class="sidebar-divider">
 
@@ -24,7 +24,7 @@
             <span>User List</span>
         </a>
     </li>
-<?php } ?>
+<?php endif; ?>
 
 
 <!-- Divider -->
