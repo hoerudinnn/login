@@ -8,6 +8,25 @@
     <div class="sidebar-brand-text mx-3">Hoer</div>
 </a>
 
+<?php if (in_groups('admin')) { ?>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        User Management
+    </div>
+
+    <!-- Nav Item - User List -->
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('admin'); ?>">
+            <i class="fas fa-user fa-sm fa-fw mr-2"></i>
+            <span>User List</span>
+        </a>
+    </li>
+<?php } ?>
+
+
 <!-- Divider -->
 <hr class="sidebar-divider">
 
@@ -18,8 +37,8 @@
 
 <!-- Nav Item - My Profile -->
 <li class="nav-item">
-    <a class="nav-link" href="charts.html">
-    <i class="fas fa-user fa-sm fa-fw mr-2"></i>
+    <a class="nav-link" href="<?= base_url('user'); ?>">
+        <i class="fas fa-user fa-sm fa-fw mr-2"></i>
         <span>My Profile</span></a>
 </li>
 
