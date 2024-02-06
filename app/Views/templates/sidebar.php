@@ -51,9 +51,15 @@
 
 <!-- Nav Item - Mahasiswa -->
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Mahasiswa</span></a>
+	<a href="<?= base_url('mata-kuliah') ?>" class="nav-link">
+    <i class="fas fa-fw fa-table"></i><span>Mata kuliah</span>
+	</a>
+</li>
+			
+<li class="nav-item">
+	<a href="<?= base_url('barang/kode_pokja') ?>" class="nav-link">
+    <i class="fas fa-fw fa-table"></i><span>Rekapan</span>
+	</a>
 </li>
 
 <!-- Divider -->
