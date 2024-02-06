@@ -10,7 +10,7 @@
         <div class="col-lg-8">
         <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4" style="padding: 20px;">
             <img src="<?= base_url(); ?>/img/<?= user()-> user_image;?>" class="img-fluid rounded-start" alt="<?= $user->username; ?>">
             </div>
             <div class="col-md-8">

@@ -43,10 +43,17 @@
 </li>
 
 <!-- Nav Item - Edit Profile -->
-<li class="nav-item">
+<!-- <li class="nav-item">
     <a class="nav-link" href="tables.html">
         <i class="fas fa-fw fa-table"></i>
         <span>Edit Profile</span></a>
+</li> -->
+
+<!-- Nav Item - Mahasiswa -->
+<li class="nav-item">
+    <a class="nav-link" href="tables.html">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Mahasiswa</span></a>
 </li>
 
 <!-- Divider -->
