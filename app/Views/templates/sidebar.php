@@ -59,9 +59,9 @@
 
 			
 <li class="nav-item">
-	<a href="<?= base_url('barang/kode_pokja') ?>" class="nav-link">
-    <i class="fas fa-fw fa-table"></i><span>Rekapan</span>
-	</a>
+	<a href="<?= base_url('rekap') ?>" class="nav-link">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Rekapan</span></a>
 </li>
 
 <!-- Divider -->

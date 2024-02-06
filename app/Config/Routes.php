@@ -18,6 +18,7 @@ $routes->get('/admin/index', 'Admin::index', ['filter' => 'role:admin']);
 $routes->get('/admin/(:num)', 'Admin::detail/$1', ['filter' => 'role:admin']);
 
 $routes->get('akademik', 'Akademik::index');
+$routes->get('rekap', 'Akademik::rekap');
 // $routes->get('kegiatan-wawasan-akademik', 'Akademik::kegiatanWawasan');  // Sesuaikan dengan nama fungsi di kontroler
 // $routes->get('beban-kerja-dosen', 'BebanKerjaDosenController::index');
 // $routes->get('perwalian', 'PerwalianController::index');

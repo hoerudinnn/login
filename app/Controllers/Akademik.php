@@ -8,19 +8,22 @@ class Akademik extends BaseController
 {
     public function index()
     {
+        $data['title'] = "Kegiatan Akademik";
+
         $model = new DokumenModel();
         $data['dokumen'] = $model->findAll();
 
-        $data['title'] = "Kegiatan Akademik";
         // Logika untuk menampilkan data kegiatan akademik
         return view('akademik/index', $data);
     }
-    public function kegiatanWawasan()
+    public function rekap()
     {
+        $data['title'] = "Rekap File";
+
         $model = new DokumenModel();
         $data['dokumen'] = $model->findAll();
-
+        
         // Logika untuk menampilkan data kegiatan akademik
-        return view('kegiatan_akademik/index', $data);
+        return view('rekap/index', $data);
     }
 }
