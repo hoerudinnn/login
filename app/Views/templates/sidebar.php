@@ -51,10 +51,12 @@
 
 <!-- Nav Item - Mahasiswa -->
 <li class="nav-item">
-	<a href="<?= base_url('mata-kuliah') ?>" class="nav-link">
-    <i class="fas fa-fw fa-table"></i><span>Mata kuliah</span>
-	</a>
+    <a href="<?= base_url('akademik') ?>" class="nav-link">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Kegiatan Akademik</span>
+    </a>
 </li>
+
 			
 <li class="nav-item">
 	<a href="<?= base_url('barang/kode_pokja') ?>" class="nav-link">

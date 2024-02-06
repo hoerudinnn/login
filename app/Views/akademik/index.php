@@ -1,9 +1,5 @@
-<?= $this->extend('templates/index'); ?>
-
-<?= $this->section('page-content'); ?>
-
 <div class="main-container">
-	<div class="pd-ltr-20 xs-pd-20-10 ml-3">
+	<div class="pd-ltr-20 xs-pd-20-10">
 		<div class="min-height-200px">
 			<div class="page-header">
 				<div class="row">
@@ -13,12 +9,13 @@
 						</div>
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="<?= base_url('gudang') ?>">Home</a></li>
+								<li class="breadcrumb-item"><a href="<?= base_url('user') ?>">Home</a></li>
 								<li class="breadcrumb-item active" aria-current="page"><?= $title ?></li>
 							</ol>
 						</nav>
 					</div>
-
+ 				
+	
  				</div>
 			</div>
 			<!-- Simple Datatable start -->
@@ -28,39 +25,45 @@
 
 			<div class="card-box mb-30">
 				<div class="pd-20">
-					<h4 class="text-blue h4">Data Mata Kuliah</h4>
-					<p class="mb-4"><a class="text-primary" href="<?= base_url('mata-kuliah/add') ?>"><button class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data Mata Kuliah</button></a></p>
+					<h4 class="text-blue h4">Mahasiswa Lulus</h4>
+					<p class="mb-0"><a class="text-primary" href="<?= base_url('') ?>"><button class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Mahasiswa Lulus</button></a></p>
 				</div>
 				<div class="pb-20">
 					<table class="data-table table stripe hover nowrap">
 						<thead>
 							<tr>
 								<th class="table-plus datatable-nosort">No</th>
-								<th>Link Document</th>
-								<th>Nama Document</th>
+								<th>Nama_link</th>
+								<th>Nama</th>
 								<th>Tanggal</th>
-
-							
-
-
-
 								<th class="datatable-nosort">Action</th>
 							</tr>
 						</thead>
 						<tbody>
 						<?php
+$no = 1;
+foreach ($barang as $key => $value) {
+    // Tampilkan semua baris tanpa memperhatikan nilai "status"
+    $link = (strpos($value->link, 'http') === 0) ? $value->link : 'http://' . $value->link;
 ?>
     <tr>
+        <td class="table-plus"><?= $no++ ?></td>
+		<td><a href="<?= $link ?>" target="_blank"><?= $value->nama_link ?></a></td>
+        <td><?= $value->nama ?></td>
+		<td><?= $value->tanggal ?></td>
         <td>
             <div class="dropdown">
                 <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                     <i class="dw dw-more"></i>
                 </a>
-                
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                    <a class="dropdown-item" href="<?= base_url('barang/delete_minimal/' . $value->id_pokja) ?>"><i class="dw dw-delete-3"></i> Delete</a>
+                </div>
             </div>
         </td>
     </tr>
 <?php
+}
 ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -86,6 +89,3 @@
     });
 </script>
 </tbody>
-		</div>
-
-<?= $this->endSection(); ?>
