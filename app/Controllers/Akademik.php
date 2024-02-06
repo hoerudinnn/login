@@ -8,8 +8,8 @@ class Akademik extends BaseController
 {
     public function index()
     {
-        // $model = new DokumenModel();
-        // $data['dokumen'] = $model->findAll();
+        $model = new DokumenModel();
+        $data['dokumen'] = $model->findAll();
 
         $data['title'] = "Kegiatan Akademik";
         // Logika untuk menampilkan data kegiatan akademik
